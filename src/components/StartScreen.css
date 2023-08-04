@@ -1,0 +1,11 @@
+.startGame h1{
+  color: var(--forestGreen);
+}
+
+.startGame p{
+  color: var(--honoluluBlue);
+}
+
+.startGame button p{
+  color: var(--babyPowder);
+}

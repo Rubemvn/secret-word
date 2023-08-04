@@ -1,0 +1,80 @@
+:root{
+  --richBlack: #040F0F;
+  --forestGreen: #248232;
+  --pigmentGreen: #2BA84A;
+  --gunmetal: #2D3A3A;
+  --babyPowder: #FCFFFC;
+  --honoluluBlue: #0E79B2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--richBlack);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  padding: 15px 50px;
+  border-radius: 5px;
+  border: none;
+  background: var(--pigmentGreen);
+  cursor: pointer;
+  transition: all .1s linear;
+}
+
+button p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--babyPowder);
+
+}
+
+button:hover {
+  scale: 1.1;
+  background-color: var(--forestGreen);
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+p,
+span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--gunmetal);
+  flex-direction: column;
+  row-gap: 10px;
+
+  -webkit-box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 14px 0px rgba(0, 0, 0, 0.2);
+}
