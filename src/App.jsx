@@ -19,6 +19,8 @@ const stages = [
 ];
 
 function App() {
+  const [enteringNow, setEnteringNow] = useState(true)
+
   const guessesQty = 5
 
   const [gameStage, setGameStage] = useState(stages[0].name);
@@ -32,6 +34,8 @@ function App() {
   const [wrongLetters, setWrongLetters] = useState([]);
   const [guesses, setGuesses] = useState(guessesQty);
   const [score, setScore] = useState(0);
+
+  console.log(gameStage)
 
   const pickedWordAndCategory = () => {
     // pick a random category
@@ -114,7 +118,7 @@ function App() {
     const uniqueLetters = [...new Set(letters)]
 
     // win condition
-    if (guessedLetters.length === uniqueLetters.length) {
+    if (guessedLetters.length === uniqueLetters.length && gameStage === stages[1].name) {
       // add score
       setScore((actualScore) => (actualScore += 100))
 
@@ -144,7 +148,12 @@ function App() {
     <>
       <div className="App">
 
-        {gameStage === "start" && <StartScreen startGame={startGame} />}
+        {gameStage === "start" &&
+          <StartScreen
+            startGame={startGame}
+            resetGame={resetGame}
+            retry={retry} />
+        }
         {gameStage === "game" &&
           <Game
             verifyLetter={verifyLetter}
